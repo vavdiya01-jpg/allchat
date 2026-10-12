@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALLCHAT</title>
+<style>
+body{background:#10141d;color:white;font-family:Arial;text-align:center;padding:25px}
+main{background:#202938;padding:20px;border-radius:18px;max-width:400px;margin:auto}
+input,button{width:100%;box-sizing:border-box;padding:14px;margin-top:12px;border:0;border-radius:10px;font-size:16px}
+button{background:#1686ff;color:white}
+</style>
+</head>
+<body>
+<main>
+<h1>💬 ALLCHAT</h1>
+<p>તમારી ચેટ, તમારી દુનિયા!</p>
+<input id="msg" placeholder="મેસેજ લખો">
+<button onclick="send()">મેસેજ મોકલો</button>
+<div id="out"></div>
+</main>
+<script>
+function send(){let i=document.getElementById("msg");let v=i.value.trim();if(v){let p=document.createElement("p");p.textContent="તમે: "+v;document.getElementById("out").appendChild(p);i.value="";}}
+</script>
+</body>
+</html>
